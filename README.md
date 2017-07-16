@@ -1,2 +1,19 @@
 # Cell-Data
-A project that explores individual choices on use of cellphones or landline phones over 1993-2010.  I find that a multinomial logit is appropriate in exploring the individual choice of (1) owning a cellphone only, (2) owning a landline only, (3), owning both modes, or (4) owning neither.  The exogenous variables include family size, real income, gender, age, year, if the subject has a college degree, if the subject is married, if the subject lives in an urban area, and if the subject is caucasian.  I have a working version of this project using a Stata script. However, I am replicating the results using both Python and R as these are more accessible than Stata in terms of price.      
+A project that explores individual choices on use of cellphones or landline phones over 1993-2010.  I find that a multinomial logit is appropriate in exploring the individual choice of 
+* Owning a cellphone only 
+* Owning a landline only 
+* Owning both modes
+* Owning neither
+
+The exogenous (Right-hand side) variables include 
+* Family size
+* Real income 
+* Gender
+* Age 
+* Year
+* If the subject has a college degree
+* If the subject is married
+* If the subject lives in an urban area
+* If the subject is caucasian 
+
+I have a working version of this project using a Stata script. However, I am replicating the results using both Python and R as these are more accessible than Stata in terms of price.
