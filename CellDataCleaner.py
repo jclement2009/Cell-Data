@@ -16,7 +16,7 @@ import io
 #import pandas.rpy.common as com
 import subprocess 
 
-"""
+
 #Custom function for calling a dta file
 def calldta(dtaname):
     dtaname1 = str(dtaname) + ".dta"
@@ -51,7 +51,6 @@ celldf = celldf[celldf.choice != "Neither"]
     
 print(celldf)
 celldf.to_csv("CellDataCleaned.csv")
-"""
 
 print("Executing CellDataAnalysisR.R. \nThis may take a minute or 2. \n******")
 subprocess.call(["/usr/local/bin/Rscript", "--vanilla", "/Users/Joseph/Python Projects/Cell-Data/CellDataAnalysisR.R"])
