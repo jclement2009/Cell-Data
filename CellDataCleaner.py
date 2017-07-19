@@ -7,24 +7,19 @@ Created on Fri Jul 14 14:48:52 2017
 @author: Joseph
 """
 
-import base64
 import pandas as pd
-#import statsmodels as sm
 import numpy as np
 import os
-import io
-#import pandas.rpy.common as com
-import subprocess 
+
+
 
 
 #Custom function for calling a dta file
 def calldta(dtaname):
     dtaname1 = str(dtaname) + ".dta"
     dtafilename = os.path.abspath(os.path.join(dtaname1))
-    return dtafilename
-    
-    
-
+    return dtafilename 
+  
 df = pd.read_stata(calldta('cell'))
 
 celldf = pd.DataFrame(df)
@@ -48,12 +43,7 @@ for pointer in range(0, rowcount, 1):
 
 #Dropping all rows with the neither choice
 celldf = celldf[celldf.choice != "Neither"]    
-    
-print(celldf)
+  
+print("Cleaned csv saved as CellDataCleaned.csv")
 celldf.to_csv("CellDataCleaned.csv")
 
-print("Executing CellDataAnalysisR.R. \nThis may take a minute or 2. \n******")
-subprocess.call(["/usr/local/bin/Rscript", "--vanilla", "/Users/Joseph/Python Projects/Cell-Data/CellDataAnalysisR.R"])
-print("***Analysis Complete***")
-print("Regression Results: \nSEE Ouput.txt")
-print("Graphical Results: \nSEE Rplots.pdf")
