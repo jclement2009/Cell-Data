@@ -3,7 +3,6 @@ A project that explores individual choices on use of cellphones or landline phon
 * Owning a cellphone only 
 * Owning a landline only 
 * Owning both modes
-* Owning neither
 
 The exogenous (Right-hand side) variables include 
 * Family size
@@ -16,4 +15,11 @@ The exogenous (Right-hand side) variables include
 * If the subject lives in an urban area
 * If the subject is caucasian 
 
-I have a working version of this project using a Stata script. However, I am replicating the results using both Python and R as these are more accessible than Stata in terms of price.
+REQUIRED PACKAGES
+Pandas
+NumPy
+R
+
+INSTRUCTIONS
+1. Execute CellDataCleaner.py this will generate the appropriate categories for the endogenous variable on Cell.dta.  The result will be saved as CellDataCleaned.csv
+2. Execute CallDataAnalysis.py to fit a multinomial logit to the data.  The results will be in output.txt and associated plot will be in Rplots.pdf
